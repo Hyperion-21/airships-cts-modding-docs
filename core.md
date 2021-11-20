@@ -37,9 +37,16 @@ Values: `BASIC` `STRUCTURAL` `LIFT` `PROPULSION` `RESOURCES` `COMMAND_AND_CREW` 
 ```
 "required": "value"
 ```
-Required Technology, City, or Charge bonus to build the module in Single Player.
+Required technology, city, or charge bonus to build the module in Single Player.
 
-Reference `Tech/tech.json` or `Bonus/bonuses.json` for list of techs/bonuses.
+See `Bonus/bonuses.json` for list of bonuses.
+***
+```
+"providesBonus": "value"
+```
+When placed, gives the craft the specified bonus. Typically used to buff a craft stats by placing a module, using modded bonuses.
+
+See `Bonus/bonuses.json` for list of bonuses.
 ***
 ```
 "w": "value"

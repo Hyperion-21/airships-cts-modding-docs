@@ -41,6 +41,15 @@ Values: `BASIC` `STRUCTURAL` `LIFT` `PROPULSION` `RESOURCES` `COMMAND_AND_CREW` 
 ***
 
 ```
+"availableFor": [ "value" ]
+```
+Types of craft the module is enabled for In-Game Editor.
+
+Values: `AIRSHIP` `LANDSHIP` `BUILDING`
+
+Default: All
+***
+```
 "required": "value"
 ```
 Required technology, city, or charge bonus to build the module in Single Player.

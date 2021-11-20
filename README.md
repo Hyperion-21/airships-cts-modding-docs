@@ -1,6 +1,6 @@
 # airships-cts-modding-docs
 
-A more up-to-date documentation for modding Airships: Conquer The Skies. 
+A more (WIP) up-to-date documentation for modding Airships: Conquer The Skies. 
 
 The [current one](https://www.moddb.com/mods/the-module-kit/tutorials/acts-module-string-reference-guide) was last updated 4 years ago, and a lot has changed since.
 

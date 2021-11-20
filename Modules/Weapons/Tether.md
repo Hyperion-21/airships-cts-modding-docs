@@ -1,0 +1,12 @@
+tetherSpec
+color
+maxRange
+tearForce
+minLength
+shrinkSpeed
+k
+anchorX
+anchorY
+width
+ripSound
+ripParticle

@@ -57,8 +57,8 @@ See `Bonus/bonuses.json` for list of bonuses.
 ***
 
 ```
-"w": "value"
-"h": "value"
+"w": value
+"h": value
 ```
 Width and Height of the module.
 

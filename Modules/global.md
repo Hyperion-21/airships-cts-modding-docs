@@ -246,6 +246,8 @@ Note that there is no `bottomDoors` string.
 Determines which tiles crew can occupy.
 
 Starts from the top-left corner.
+
+Default: All tiles are occupiable
 ***
 
 # Resource

@@ -349,9 +349,7 @@ Unit: Milliseconds
 ```
 How much command the module generates. Higher means faster commands.
 
-Equation provided by Zarkonnen:
-
-![image](https://user-images.githubusercontent.com/69665635/142716537-8016a315-1e68-42a3-a2a9-5d74f2de722c.png)
+Although an equation does exist, it seems incorrect. Needs testing.
 ***
 
 ```

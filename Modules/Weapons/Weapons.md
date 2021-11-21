@@ -90,6 +90,7 @@ Unit: "Standard deviation in tiles per pixel" (src: [zark modding guide](http://
 How "precise" the weapon is. See image for an example. 0 means shots are completely random, 1 means shots are clustered.
 
 ![image](https://user-images.githubusercontent.com/69665635/142752839-9121201a-653d-46b4-bbd0-2c9f2deef87d.png)
+*img credit: St. Olaf Collede*
 
 Equation:
 

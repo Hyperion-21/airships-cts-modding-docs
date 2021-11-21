@@ -81,7 +81,12 @@ Unit: Milliseconds
 ```
 How inaccurate the module is, before compensating `jitterMerge`.
 
-Unit: "Standard deviation in tiles per pixel" (src: [zark modding guide](http://www.zarkonnen.com/airships/modding_guide))
+Equation:
+
+![image](https://user-images.githubusercontent.com/69665635/142755808-76227011-19a5-4fa8-85a8-00eafa68c980.png)
+![image](https://user-images.githubusercontent.com/69665635/142755815-aefd1ed9-89cc-49b5-a1a1-cfba8cc2787a.png)
+
+Unknown if `firstShot` unit is pixels or tiles.
 ***
 
 ```
@@ -92,10 +97,10 @@ How "precise" the weapon is. See image for an example. 0 means shots are complet
 ![image](https://user-images.githubusercontent.com/69665635/142752839-9121201a-653d-46b4-bbd0-2c9f2deef87d.png)
 *img credit: St. Olaf Collede*
 
-Equation:
+Equation for `jitterMerge`'d shots:
 
-![image](https://user-images.githubusercontent.com/69665635/142753254-d9b81899-5e40-4941-b311-18a1e271375c.png)
-![image](https://user-images.githubusercontent.com/69665635/142753288-d0ec8219-ffca-46c5-858d-2363776c4bea.png)
+![image](https://user-images.githubusercontent.com/69665635/142755722-732c8df0-e0c4-44ac-8817-8886b06e1145.png)
+![image](https://user-images.githubusercontent.com/69665635/142755741-25d2b7e5-d7b2-4826-90ec-eb195ec71599.png)
 
 With bonuses being, for example, accuracy bonuses from modules, or fog (3x) and light/dark (2x).
 ***

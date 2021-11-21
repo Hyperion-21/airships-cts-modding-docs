@@ -79,14 +79,18 @@ Unit: Milliseconds
 ```
 "inaccuracy": value
 ```
-How inaccurate the module is, before compensating `jitterMerge`.
+How inaccurate the module is, before compensating for `jitterMerge`.
 
 Equation:
 
-![image](https://user-images.githubusercontent.com/69665635/142755808-76227011-19a5-4fa8-85a8-00eafa68c980.png)
-![image](https://user-images.githubusercontent.com/69665635/142755815-aefd1ed9-89cc-49b5-a1a1-cfba8cc2787a.png)
+![image](https://user-images.githubusercontent.com/69665635/142779806-53eb0c9c-48cd-47fb-860d-248798ba9997.png)
+![image](https://user-images.githubusercontent.com/69665635/142779816-481ab848-d078-448b-b2db-d503b98b5ae9.png)
 
-Unknown if `firstShot` unit is pixels or tiles.
+With bonuses being, for example, accuracy bonuses from modules, or fog (3x) and light/dark (2x).
+
+If `jitterMerge` is present, the equation will only apply to the first shot.
+
+Unit (for `firstShot` and `target`): Pixels
 ***
 
 ```
@@ -99,10 +103,12 @@ How "precise" the weapon is. See image for an example. 0 means shots are complet
 
 Equation for `jitterMerge`'d shots:
 
-![image](https://user-images.githubusercontent.com/69665635/142755722-732c8df0-e0c4-44ac-8817-8886b06e1145.png)
-![image](https://user-images.githubusercontent.com/69665635/142755741-25d2b7e5-d7b2-4826-90ec-eb195ec71599.png)
+![image](https://user-images.githubusercontent.com/69665635/142779879-bf3a1389-443e-466c-abc2-adab1c9d6789.png)
+![image](https://user-images.githubusercontent.com/69665635/142779891-2bc9c077-f6a2-41ae-b1d3-d2155411675e.png)
 
 With bonuses being, for example, accuracy bonuses from modules, or fog (3x) and light/dark (2x).
+
+Unit (for `nextShot`, `previousShot`, `target`): Pixels
 ***
 
 ```

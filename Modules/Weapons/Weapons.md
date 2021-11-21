@@ -1,78 +1,181 @@
-# WIP FILE IGNORE THIS
+# Weapons
 
-hardness
-The damage of the physical Module in a collision scenario; intended for ramming.
+```
+"hardness": value
+```
+The damage of the physical module in a collision scenario; intended for ramming.
+***
 
-maxRange
-Maximum Range in pixels that the module must be from the target to fire the weapon.
+```
+"maxRange": value,
+"minRange": value
+```
+Maximum/minimum range that the module must be from the target to fire the weapon.
 
-minRange
-Minimum Range in pixels that the module must be from the target to fire the weapon.
+Unit: Pixels
+***
 
-XRange
-Range in pixels horizontally that the module must be from the target to fire the weapon.
+```
+"maxXRange": value,
+"minXRange": value
+```
+Maximum/minimum range horizontally that the module must be from the target to fire the weapon.
 
-UpRange
-Max Range in pixels that the Shot can reach vertically upwards.
+Unit: Pixels
+***
 
-DownRange
-Max Range in pixels that the Shot can reach vertically downwards.
+```
+"maxUpRange": value,
+"minUpRange": value
+```
+Maximum/minimum range upwards that the module must be from the target to fire the weapon.
+***
 
-shotSpeed
-How fast the Shot travels its trajectory in Tiles per millisecond.
+```
+"maxDownRange": value,
+"minDownRange": value
+```
+Maximum/minimum range downwards that the module must be from the target to fire the weapon.
+***
 
-shotSpeedVariation
-Variation of shotSpeed for each Shot fired in Tiles per millisecond.
+```
+"shotSpeed": value
+```
+How fast the shot travels its trajectory.
 
-reload
-Time in milliseconds between shots.
+Unit: Tiles per millisecond
+***
 
-clip
-Number of Shots the Module can fire before needing a reload.
+```
+"shotSpeedVariation": value
+```
+Variation of `shotSpeed` for each Shot fired.
 
-clipReloadTime
-Time it takes to reload the weapon, in milliseconds.
+Unit: Tiles per millisecond
+***
 
-inaccuracy
-How inaccurate the Module is, before compensating "jitterMerge".
+```
+"reload": value
+```
+Time between shots.
 
-jitterMerge
+Unit: Millisecond
+***
 
-numShots
-Number of projectiles in a single Shot. Only seen in the Grapeshot module.
+```
+"clip": value
+```
+Number of shots the module can fire before needing a reload.
+***
 
-multiShotJitter
-[incomplete - calculation] Jitter designed for "numShots". Only seen in the Grapeshot module. In percentage, 0.0 being extremely inaccurate and 1.0 always firing the same direction.
-In decimal, ex. #.#
+```
+"clipReloadTime": value
+```
+Time it takes to reload the weapon.
 
-blastDmg
-Blast Damage caused by the Modules Shots.
+Unit: Milliseconds
+***
 
-blastSplashRadius
-Radius of the widened area of damage after a Shot hits the Target, in Pixels.
-Only seen accompanying "blastDmg".
+```
+"inaccuracy": value
+```
+How inaccurate the module is, before compensating `jitterMerge`.
 
-penDmg
-Penetration Damage caused by the Modules Shots.
+Unit: "Standard deviation in tiles per pixel" (src: [zark modding guide](http://www.zarkonnen.com/airships/modding_guide))
+***
 
-directDmg
-Direct Damage dealt to the Target Module, without Armour penalties.
+```
+"jitterMerge": value
+```
+How "precise" the weapon is. See image for an example. 0 means shots are completely random, 1 means shots are clustered.
 
-shootTroopsRange
-[incomplete - calculation] Specifies the Module can Target Troops and at what range. (Assumed in Pixels - measurement needed)
+![image](https://user-images.githubusercontent.com/69665635/142752839-9121201a-653d-46b4-bbd0-2c9f2deef87d.png)
 
-fixedInaccuracyVsTroops
-[incomplete - calculation] Fixed Inaccuracy against Troops. (Unknown if stacking with "innacuracy", unknown Value measurement)
+Equation:
 
-recoilForce
-[incomplete - calculation] Reverse Propulsion caused by firing the Shot, in negative Tile value.
-In decimal; ex. #.#
+![image](https://user-images.githubusercontent.com/69665635/142753254-d9b81899-5e40-4941-b311-18a1e271375c.png)
+![image](https://user-images.githubusercontent.com/69665635/142753288-d0ec8219-ffca-46c5-858d-2363776c4bea.png)
 
-impactForce
+With bonuses being, for example, accuracy bonuses from modules, or fog (3x) and light/dark (2x).
+***
 
-fireArc
-Direction and arc the Module fires.
+```
+"numShots": value
+```
+Number of projectiles in a single shot.
+***
 
-optimumRange
-Distance from the Module that is optimal for the weapon, indicating how the AI should react to the Module.
-In pixels.
+```
+"multiShotJitter": value
+```
+Jitter designed for `numShots`. Most likely the same calculation as `jitterMerge`.
+***
+
+```
+"blastDmg": value
+```
+Blast damage caused by the module's shots.
+***
+
+```
+"blastSplashRadius": value
+```
+Radius of the area of damage after a shot hits the target.
+
+Unit: Pixels
+***
+
+```
+"penDmg": value
+```
+Penetration damage caused by the module's shots.
+***
+
+```
+"directDmg": value
+```
+Direct damage dealt to the target module, without armor penalties.
+***
+
+```
+"shootTroopsRange": value
+```
+Specifies the Module can Target Troops and at what range. 
+
+(Assumed in Pixels - measurement needed)
+***
+
+```
+"fixedInaccuracyVsTroops": value
+```
+Fixed Inaccuracy against Troops. 
+
+(Unknown if stacking with "innacuracy", unknown value measurement)
+***
+
+```
+"recoilForce": value
+```
+Reverse propulsion caused by firing the Shot, in negative tile value.
+***
+
+```
+"impactForce": value
+```
+Propulsion exerted on target, when hit by the module's shot.
+***
+
+```
+"fireArc": { "direction": "value", "degrees": value }
+```
+Direction and arc the module is allowed to fire in.
+
+Values: `up` `down` `forwards` `backwards`
+***
+
+```
+"optimumRange": value
+```
+Distance from the module that is optimal for the weapon, for AI purposes.
+
+Unit: Pixels

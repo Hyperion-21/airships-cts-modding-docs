@@ -100,38 +100,37 @@ Mechanical Tentacle has `20`.
 ```
 "tentacles": [{
     "snatchSound": { 
-        "layers": [ 
-            { 
-                "variations": [ "value" ], 
-                "volume": { "min": value, "max": value}, 
-                "pitch": { "min": value, "max": value } 
-            }
-        ] 
-    },
+        "layers": [{ 
+            "variations": [ "value" ], 
+```
+```
+"tentacles": [{
+    "snatchSound": { 
+        "layers": [{ 
+            "volume": { "min": value, "max": value},  
+```
+```
+"tentacles": [{
+    "snatchSound": { 
+        "layers": [{ 
+            "pitch": { "min": value, "max": value }  
 ```
 ```
 "tentacles": [{
     "attackSound": { 
-        "layers": [ 
-            { 
-                "variations": [ "value" ], 
-                "volume": { "min": value, "max": value}, 
-                "pitch": { "min": value, "max": value } 
-            }
-        ]
-    },
+        "layers": [{ 
+            "variations": [ "value" ], 
+            "volume": { "min": value, "max": value}, 
+            "pitch": { "min": value, "max": value }
 ```
 ```
 "tentacles": [{
-    "segmentImgOverrides": [
-        {
-            "index": 0,
-            "img": { "src": "value", "x": value, "y": value, "w": value, "h": value },
-            "imgVerticallyFlipped": { "src": "value", "x": value, "y": value, "w": value, "h": value }
-        },
-            "index": 0,
-            "img": { "src": "monsters2", "x": value, "y": value, "w": value, "h": value };
-            "imgVerticallyFlipped": { "src": "value", "x": value, "y": value, "w": value, "h": value }
-        }
-    ],
+    "segmentImgOverrides": [{
+        "index": 0,
+```
+```
+"tentacles": [{
+    "segmentImgOverrides": [{
+        "img": { "src": "value", "x": value, "y": value, "w": value, "h": value },
+        "imgVerticallyFlipped": { "src": "value", "x": value, "y": value, "w": value, "h": value }
 ```

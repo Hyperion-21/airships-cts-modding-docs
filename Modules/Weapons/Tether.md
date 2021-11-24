@@ -6,7 +6,7 @@
 ```
 The color of the rope, in decimal RGB. 
 
-Harpoon Gun uses 217, 203, 177.
+Harpoon Gun uses `217, 203, 177`.
 ***
 
 ```
@@ -14,6 +14,8 @@ Harpoon Gun uses 217, 203, 177.
     "maxRange": value
 ```
 Distance from the module the tether can reach.
+
+Harpoon Gun uses `800`.
 
 Unit: Pixels
 ***
@@ -24,6 +26,8 @@ Unit: Pixels
 ```
 The amount of force required to break the tether.
 
+Harpoon Gun uses `1.5`.
+
 Unit: Unknown.
 ***
 
@@ -33,6 +37,8 @@ Unit: Unknown.
 ```
 The minimum length of a tether, before it stops pulling.
 
+Harpoon Gun uses `100`.
+
 Unit: Pixels
 ***
 
@@ -41,6 +47,8 @@ Unit: Pixels
     "shrinkSpeed": value
 ```
 The speed the tether retracts.
+
+Harpoon Gun uses `0.05`.
 
 Unit: Unknown
 ***
@@ -53,7 +61,7 @@ The kinematic strength of the tether. Higher values increases the force the teth
 
 At 0, the tether does nothing. Any value above 0.1 is not recommended.
 
-Harpoon Gun uses 0.02
+Harpoon Gun uses `0.02`.
 ***
 
 ```
@@ -61,7 +69,7 @@ Harpoon Gun uses 0.02
     "anchorX": value,
     "anchorY": value
 ```
-The location on the module to attach the tether to.
+The graphical location on the module to attach the tether to.
 
 Unit: Tiles
 ***
@@ -70,7 +78,9 @@ Unit: Tiles
 "tetherSpec": {
     "width": value
 ```
-The width of the rope.
+The graphical width of the rope.
+
+Harpoon Gun uses `1`.
 
 Unit: Pixels
 ***

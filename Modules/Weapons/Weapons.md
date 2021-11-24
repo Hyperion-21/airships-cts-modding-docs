@@ -146,7 +146,7 @@ Penetration damage caused by the module's shots.
 ```
 "directDmg": value
 ```
-Direct damage dealt to the target module's HP, completely ignoring armor.
+Direct damage dealt to the target module's armor, ignoring resistances.
 ***
 
 ```
